@@ -1,0 +1,18 @@
+{
+    "name": "todo-list-2",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build:css": "tailwindcss -i ./src/css/tailwind.css -o ./dist/css/tailwind.css -w"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "tailwindcss": "^2.2.19"
+    },
+    "dependencies": {
+        "daisyui": "^1.16.2"
+    }
+}
