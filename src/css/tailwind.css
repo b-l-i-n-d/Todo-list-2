@@ -1,3 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .sidebar-items {
+        @apply flex
+        items-center
+        text-sm
+        font-semibold
+        box-border
+        pl-6
+        py-3
+        rounded-r-full
+        space-x-8
+        bg-gray-100 bg-opacity-0 bg-blend-color
+        hover:bg-opacity-30 active:bg-yellow-800 active:bg-opacity-30 focus:bg-yellow-800;
+    }
+}

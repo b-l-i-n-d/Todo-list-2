@@ -5,7 +5,10 @@ module.exports = {
         extend: {},
     },
     variants: {
-        extend: {},
+        extend: {
+            backgroundColor: ['active'],
+            backgroundOpacity: ['active'],
+        },
     },
     plugins: [require("daisyui")],
 };
