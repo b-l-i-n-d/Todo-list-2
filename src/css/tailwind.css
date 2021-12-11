@@ -19,3 +19,21 @@
         hover:bg-opacity-30 active:bg-yellow-800 active:bg-opacity-30 focus:bg-yellow-800;
     }
 }
+
+/* sidebar */
+#sidebar-check:checked ~ .sidebar {
+    left: -210px;
+}
+
+#sidebar-check:checked ~ .sidebar a span {
+    display: none;
+}
+
+#sidebar-check:checked ~ .sidebar a {
+    margin-left: 210px;
+    width: 70px;
+}
+
+#sidebar-check:checked ~ .content {
+    margin-left: 80px;
+}

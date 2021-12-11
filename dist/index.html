@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
         <link rel="stylesheet" href="./css/tailwind.css" />
-        <link rel="stylesheet" href="./css/style.css" />
         <link
             href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
             rel="stylesheet"
@@ -151,32 +150,90 @@
 
         <!-- content -->
         <div class="content pt-20 ml-72 h-screen transition-all duration-300">
-            <div class="flex justify-center mx-80 mt-8">
+            <!-- note input -->
+            <div class="flex justify-center mt-8">
                 <div
                     class="
+                        note-input
                         form-control
                         flex-1
+                        max-w-2xl
+                        mx-10
                         text-lg
                         font-bold
-                        border-2
+                        border-2 border-gray-400
                         rounded-lg
                     "
                 >
+                    <div class="relative">
+                        <!-- title input field -->
+
+                        <input
+                            id="input-title"
+                            type="text"
+                            placeholder="Title"
+                            class="input input-ghost bg-neutral hidden"
+                        />
+
+                        <!-- note  -->
+                        <div
+                            class="
+                                absolute
+                                cursor-auto
+                                btn
+                                top-0
+                                right-0
+                                rounded-l-none
+                                items-center
+                                space-x-5
+                                hover:bg-neutral hover:border-transparent
+                            "
+                            id="input-note-btngroup"
+                        >
+                            <button>
+                                <i class="bx bx-check-square bx-sm"></i>
+                            </button>
+                            <label for="image-upload">
+                                <i class="bx bx-image-alt bx-sm"></i>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- note input field -->
+
                     <input
-                        type="text"
-                        placeholder="Title"
-                        class="input input-ghost bg-neutral hidden"
-                    />
-                    <input
+                        id="input-note"
                         type="text"
                         placeholder="Take a note..."
                         class="input input-ghost bg-neutral"
                     />
+                    <div
+                        class="hidden justify-between items-center px-5"
+                        id="input-bottom-btn"
+                    >
+                        <div class="space-x-3">
+                            <a class="btn btn-circle text-lg" href="#">
+                                <i class="bx bx-bell-plus"></i>
+                            </a>
+                            <a class="btn btn-circle text-lg" href="#">
+                                <i class="bx bx-palette"></i>
+                            </a>
+                            <a class="btn btn-circle text-lg" href="#">
+                                <label class="cursor-pointer" for="image-upload"
+                                    ><i class="bx bx-image"></i
+                                ></label>
+                                <input id="image-upload" type="file" hidden />
+                            </a>
+                        </div>
+                        <div>
+                            <button class="btn normal-case">Close</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="./scripts/script.js"></script>
     </body>
 </html>
