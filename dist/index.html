@@ -13,7 +13,7 @@
 
         <title>To-do list</title>
     </head>
-    <body>
+    <body class="font-roboto">
         <input type="checkbox" id="sidebar-check" class="hidden" />
         <!-- navbar -->
         <div
@@ -151,8 +151,9 @@
         <!-- content -->
         <div class="content pt-20 ml-72 h-screen transition-all duration-300">
             <!-- note input -->
-            <div class="flex justify-center mt-8">
-                <div
+            <div class="flex justify-center my-8">
+                <form
+                    id="input-form"
                     class="
                         note-input
                         form-control
@@ -201,12 +202,12 @@
 
                     <!-- note input field -->
 
-                    <input
+                    <textarea
                         id="input-note"
-                        type="text"
+                        class="textarea textarea-ghost bg-neutral resize-none"
+                        rows="1"
                         placeholder="Take a note..."
-                        class="input input-ghost bg-neutral"
-                    />
+                    ></textarea>
                     <div
                         class="hidden justify-between items-center px-5"
                         id="input-bottom-btn"
@@ -219,14 +220,212 @@
                                 <i class="bx bx-palette"></i>
                             </a>
                             <a class="btn btn-circle text-lg" href="#">
-                                <label class="cursor-pointer" for="image-upload"
+                                <label
+                                    class="cursor-pointer w-full"
+                                    for="image-upload"
                                     ><i class="bx bx-image"></i
                                 ></label>
                                 <input id="image-upload" type="file" hidden />
                             </a>
                         </div>
                         <div>
-                            <button class="btn normal-case">Close</button>
+                            <button
+                                class="btn normal-case"
+                                id="input-close-btn"
+                            >
+                                Close
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- note input end -->
+
+            <!-- note items -->
+            <div id="notes-container">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+                >
+                    <div class="card border-[1px] border-gray-200">
+                        <div class="card-body p-4 group">
+                            <h2 class="card-title inline-flex justify-between">
+                                <div>
+                                    Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Facilis, iste!
+                                </div>
+                                <button class="btn btn-sm btn-ghost text-lg">
+                                    <i class="bx bx-pin"></i>
+                                </button>
+                            </h2>
+                            <div class="note flex-1 whitespace-pre-wrap">
+                                <span>
+                                    Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing elit. Recusandae, velit.
+                                </span>
+                            </div>
+                            <div
+                                class="
+                                    text-transparent
+                                    justify-between
+                                    card-actions
+                                    group-hover:text-neutral-content
+                                "
+                            >
+                                <button class="btn btn-sm btn-ghost">
+                                    <i class="bx bxs-bell-plus"></i>
+                                </button>
+                                <button class="btn btn-sm btn-ghost">
+                                    <i class="bx bx-palette"></i>
+                                </button>
+                                <button class="btn btn-sm btn-ghost">
+                                    <i class="bx bx-image"></i>
+                                </button>
+                                <button class="btn btn-sm btn-ghost">
+                                    <i class="bx bx-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-[1px] border-gray-200">
+                        <div class="card-body p-4 group">
+                            <h2 class="card-title inline-flex justify-between">
+                                <div>
+                                    Lorem ipsum dolor, sit amet consectetur
+                                    adipisicing elit. Facilis, iste!
+                                </div>
+                                <button class="btn btn-sm btn-ghost text-lg">
+                                    <i class="bx bx-pin"></i>
+                                </button>
+                            </h2>
+                            <div class="note flex-1 p">
+                                <ul>
+                                    <li
+                                        class="
+                                            flex
+                                            items-center
+                                            py-2
+                                            border-y-[0.5px] border-transparent
+                                            focus-within:border-slate-600
+                                        "
+                                    >
+                                        <div
+                                            class="
+                                                flex flex-1
+                                                items-center
+                                                space-x-2
+                                            "
+                                        >
+                                            <div
+                                                class="
+                                                    btn btn-xs
+                                                    no-animation
+                                                    p-0
+                                                "
+                                            >
+                                                <i
+                                                    class="
+                                                        bx bx-check-square
+                                                        text-2xl
+                                                    "
+                                                ></i>
+                                            </div>
+                                            <span
+                                                class="outline-none"
+                                                contenteditable="true"
+                                                >Lorem, ipsum dolor.</span
+                                            >
+                                        </div>
+                                        <div
+                                            class="
+                                                remove-list-btn
+                                                btn btn-xs
+                                                no-animation
+                                                p-0
+                                                hidden
+                                            "
+                                        >
+                                            <i class="bx bx-x bx-sm"></i>
+                                        </div>
+                                    </li>
+                                    <li
+                                        class="
+                                            flex
+                                            items-center
+                                            py-2
+                                            border-y-[0.5px] border-transparent
+                                            focus-within:border-slate-600
+                                        "
+                                    >
+                                        <div
+                                            class="
+                                                flex flex-1
+                                                items-center
+                                                space-x-2
+                                            "
+                                        >
+                                            <div
+                                                class="
+                                                    btn btn-xs
+                                                    no-animation
+                                                    p-0
+                                                "
+                                            >
+                                                <i
+                                                    class="
+                                                        bx bx-check-square
+                                                        text-2xl
+                                                    "
+                                                ></i>
+                                            </div>
+                                            <span
+                                                class="outline-none"
+                                                contenteditable="true"
+                                                >Lorem, ipsum dolor.</span
+                                            >
+                                        </div>
+                                        <div
+                                            class="
+                                                remove-list-btn
+                                                btn btn-xs
+                                                no-animation
+                                                p-0
+                                                hidden
+                                            "
+                                        >
+                                            <i class="bx bx-x bx-sm"></i>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div
+                                class="
+                                    text-transparent
+                                    justify-between
+                                    card-actions
+                                    group-hover:text-neutral-content
+                                "
+                            >
+                                <button class="btn btn-sm btn-ghost text-xl">
+                                    <i class="bx bxs-bell-plus"></i>
+                                </button>
+                                <button class="btn btn-sm btn-ghost text-xl">
+                                    <i class="bx bx-palette"></i>
+                                </button>
+                                <button class="btn btn-sm btn-ghost text-xl">
+                                    <i class="bx bx-image"></i>
+                                </button>
+                                <button
+                                    class="
+                                        btn btn-sm btn-ghost
+                                        text-xl
+                                        tooltip tooltip-info
+                                    "
+                                    data-tip="Delete"
+                                >
+                                    <i class="bx bx-trash"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

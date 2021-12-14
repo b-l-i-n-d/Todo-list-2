@@ -37,3 +37,8 @@
 #sidebar-check:checked ~ .content {
     margin-left: 80px;
 }
+
+ul > li:hover > .remove-list-btn,
+ul > li:focus-within > .remove-list-btn {
+    display: inline-block;
+}
